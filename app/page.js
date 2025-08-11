@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import { MessageCircle, Shield, Brain, MapPin, Smartphone, Lock, ArrowRight, CheckCircle, Zap, Clock, Users, Sparkles } from 'lucide-react';
+import { MessageCircle, Shield, Brain, MapPin, Smartphone, Lock, ArrowRight, CheckCircle, Zap, Clock, Users, Sparkles, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
@@ -89,7 +89,7 @@ function HeroSection() {
             >
               <span className="flex items-center gap-3">
                 <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-                Try Bino Now - It's Free
+                Try Bino Now - It&apos;s Free
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </span>
             </Button>
@@ -152,7 +152,7 @@ function ProblemSection() {
     {
       icon: "🏙️",
       title: "Lost in a new city?",
-      description: "Generic recommendations that don't know you're vegetarian, hate crowds, or prefer quiet coffee shops for work.",
+      description: "Generic recommendations that don&apos;t know you&apos;re vegetarian, hate crowds, or prefer quiet coffee shops for work.",
       gradient: "from-yellow-500/20 to-red-500/20",
       iconBg: "from-yellow-500 to-red-500"
     }
@@ -215,7 +215,7 @@ function ProblemSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            We get it. AI assistance shouldn't feel like work.
+            We get it. AI assistance shouldn&apos;t feel like work.
           </motion.p>
         </motion.div>
 
@@ -327,7 +327,7 @@ function SolutionSection() {
               </h3>
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed">
                 No new apps. No starting over. Just open WhatsApp and chat with an AI that
-                <span className="text-green-400 font-semibold"> remembers everything about you</span>
+                <span className="text-green-400 font-semibold"> remembers everything about you </span>
                 and gets smarter with every conversation.
               </p>
             </div>
@@ -353,7 +353,7 @@ function FeaturesSection() {
     {
       icon: Smartphone,
       title: "Zero Learning Curve",
-      description: "It's just WhatsApp. The app you already use daily. No new interfaces, no tutorials, no forgotten passwords.",
+      description: "It&apos;s just WhatsApp. The app you already use daily. No new interfaces, no tutorials, no forgotten passwords.",
       benefit: "Start using immediately",
       color: "from-blue-500 to-cyan-600"
     },
@@ -430,8 +430,8 @@ function DemoSection() {
 
   const demos = [
     {
-      question: "I'm new to Bangalore, what should I do this weekend?",
-      response: "Welcome to Bangalore! Based on the weather, I recommend visiting Lalbagh Botanical Garden in the morning, then head to Commercial Street for shopping and street food. Don't miss the sunset at UB City Mall rooftop - perfect for weekend vibes!",
+      question: "I&apos;m new to Bangalore, what should I do this weekend?",
+      response: "Welcome to Bangalore! Based on the weather, I recommend visiting Lalbagh Botanical Garden in the morning, then head to Commercial Street for shopping and street food. Don&apos;t miss the sunset at UB City Mall rooftop - perfect for weekend vibes!",
       context: "Local Expert"
     },
     {
@@ -441,7 +441,7 @@ function DemoSection() {
     },
     {
       question: "Find me a good coffee shop for working",
-      response: "Since you mentioned you're vegetarian and like quiet spaces for work, I recommend 'Third Wave Coffee' in Koramangala - they have excellent filter coffee, vegan milk options, reliable WiFi, and it's usually quiet during weekday mornings.",
+      response: "Since you mentioned you&apos;re vegetarian and like quiet spaces for work, I recommend &apos;Third Wave Coffee&apos; in Koramangala - they have excellent filter coffee, vegan milk options, reliable WiFi, and it&apos;s usually quiet during weekday mornings.",
       context: "Smart Recommendations"
     }
   ];
@@ -451,7 +451,7 @@ function DemoSection() {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [demos.length]);
 
   return (
     <section ref={ref} className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
@@ -540,7 +540,7 @@ function BenefitsSection() {
             Perfect for Everyone
           </h2>
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto font-light">
-            Whether you're exploring a new city or need a smart assistant, Bino adapts to your needs
+            Whether you&apos;re exploring a new city or need a smart assistant, Bino adapts to your needs
           </p>
         </motion.div>
 
@@ -641,7 +641,7 @@ function SocialProofSection() {
               </div>
 
               <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base lg:text-lg italic">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
 
               <div>
